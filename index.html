@@ -521,6 +521,19 @@
                 };
                 // Initialize Firebase
                 const app = initializeApp(firebaseConfig);
+                // Khởi tạo Firebase
+                // Lấy đối tượng messaging của Firebase
+                var messaging = app.messaging();
+                // Yêu cầu quyền hiển thị thông báo
+                messaging.requestPermission()
+                .then(function () {
+                console.log('Quyền hiển thị thông báo đã được cấp!');
+                // Gửi thông báo đẩy khi đã có quyền
+                //sendPushNotification();
+                })
+                .catch(function (error) {
+                console.log('Lỗi khi yêu cầu quyền hiển thị thông báo:', error);
+                });
                 const analytics = getAnalytics(app);
                 </script>
             </body>
