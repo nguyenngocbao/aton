@@ -6,9 +6,10 @@ jQuery(document).ready(function () {
           const tag = event.tag;
           // Xử lý thông tin từ thẻ NFC theo ý muốn của bạn
           console.log(tag)
+          alert(JSON.stringify(tag))
           window.onload.href = "wallet.html"
         });
       } else {
-        console.error("Trình duyệt không hỗ trợ NFC.");
+        alert("Trình duyệt không hỗ trợ NFC.");
       }
 });
