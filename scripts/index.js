@@ -1,15 +1,13 @@
 jQuery(document).ready(function () {
-    if ("nfc" in navigator) {
-        // Thêm một sự kiện nghe để xử lý khi thẻ NFC được đọc
-        navigator.nfc.addEventListener("reading", event => {
-          // Trích xuất thông tin từ thẻ NFC ở đây
-          const tag = event.tag;
-          // Xử lý thông tin từ thẻ NFC theo ý muốn của bạn
-          console.log(tag)
-          alert(JSON.stringify(tag))
-          window.onload.href = "wallet.html"
-        });
-      } else {
-        alert("Trình duyệt không hỗ trợ NFC.");
-      }
+    const ndef = new NDEFReader();
+    ndef.scan().then(() => {
+        alert("Đã kết nối đến thiết bị NFC.");
+      }).catch((error) => {
+        alert("Không thể kết nối đến thiết bị NFC: " + error);
+      });
+      ndef.addEventListener("reading", (event) => {
+        alert("Thẻ NFC đã được đọc:", event);
+        // Xử lý dữ liệu từ thẻ NFC ở đây.
+      });
+      
 });
