@@ -6,16 +6,16 @@ jQuery(document).ready(function () {
   .then(() => {
     console.log("Scan started successfully.");
     ndef.onreadingerror = (event) => {
-      console.log(
+      alert(
         "Error! Cannot read data from the NFC tag. Try a different one?",
       );
     };
     ndef.onreading = (event) => {
-      console.log("NDEF message read.");
+      alert("NDEF message read.");
     };
   })
   .catch((error) => {
-    console.log(`Error! Scan failed to start: ${error}.`);
+    alert(`Error! Scan failed to start: ${error}.`);
   });
     }else{
       alert("Không hỗ trợ NFC.");
