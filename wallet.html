@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>StickyMobile BootStrap</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+</head>
+
+<body class="theme-light" data-highlight="highlight-red" data-gradient="body-default">
+
+<div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+
+<div id="page">
+
+    <div class="header header-fixed header-logo-center">
+        <a href="index.html" class="header-title">HMG Wallet</a>
+        <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
+    </div>
+
+    <div id="footer-bar" class="footer-bar-1">
+        <a href="index.html" ><i class="fa fa-wallet"></i><span>Wallet</span></a>
+        <a href="index-pages.html" ><i class="fa-solid fa-arrow-right-arrow-left"></i><span>Tranfer</span></a>
+        <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span></a>
+    </div>
+
+    <div class="page-content header-clear-medium">
+
+        <div data-card-height="230" class="card card-style rounded-m shadow-xl " >
+            <div class="card-top mt-4 ms-3">
+                <h3 class="" style="margin-bottom: 1px;">Happy Crypto</h1>
+                <p class="bottom-0  opacity-50 under-heading font-12">1234 5678 9012 3456</p>
+            </div>
+            <div class="card-bottom text-center">
+                <h1 class=" fa-4x">$8.178</h1>
+                <p class=" opacity-70 font-11">Account Ballance</p>
+            </div>
+            <div class="card-overlay bg-white opacity-70"></div>
+        </div>
+
+        <div class="card card-style bg-theme pb-0" style="height: 800px;">
+            <div id="tab-group-1">
+                <div class="tab-controls tabs-small" data-highlight="bg-blue-dark">
+                    <a href="#" data-active data-bs-toggle="collapse" data-bs-target="#tab-1">Token</a>
+                    <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-2">NFT</a>
+                </div>
+                <div data-bs-parent="#tab-group-1" class="collapse pt-3 show" id="tab-1">
+                    <div class="mx-3 list-group list-custom-large">
+                        <a href="#" class="mt-n3">
+                            <i class="fa-brands fa-ethereum rounded-xl shadow-xl bg-black-dark"></i>
+                            <span style="margin-top: 4px;">ETH</span>
+                            <span class="badge bg-green-light font-11">3.6 ETH</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div data-bs-parent="#tab-group-1" class="collapse pt-3" id="tab-2">
+                </div>
+                <div data-bs-parent="#tab-group-1" class="collapse pt-3" id="tab-3">
+                    <p class="content mt-0">
+                        Information regarding services provided by your wallet or other useful information that can go here. Simple to use and edit.
+                    </p>
+                    <div class="divider divider-margins"></div>
+                    <div class="alert me-3 ms-3 mb-5 rounded-s shadow-xl bg-green-dark" role="alert">
+                        <span class="alert-icon"><i class="fa fa-check font-18"></i></span>
+                        <h4 class="text-uppercase color-white">Transfer Complete</h4>
+                        <strong class="alert-icon-text">You received $200 from John Doe.</strong>
+                    </div>
+                    <div class="ms-3 me-3 alert alert-small rounded-s shadow-xl bg-blue-dark" role="alert">
+                        <span><i class="fa fa-upload"></i></span>
+                        <strong class="font-12">Send $100 to Karla</strong>
+                        <strong class="float-end opacity-50 font-10">Pending</strong>
+                    </div>
+                    <div class="ms-3 me-3 alert alert-small rounded-s shadow-xl bg-green-dark" role="alert">
+                        <span><i class="fa fa-upload"></i></span>
+                        <strong class="font-12">Send 14.99 to John</strong>
+                        <strong class="float-end opacity-50 font-10">Success</strong>
+                    </div>
+                    <div class="ms-3 me-3 alert alert-small rounded-s shadow-xl bg-yellow-dark" role="alert">
+                        <span><i class="fa fa-download"></i></span>
+                        <strong class="font-12">Receive $500 from Joe</strong>
+                        <strong class="float-end opacity-50 font-10">Error</strong>
+                    </div>
+                    <div class="ms-3 me-3 alert alert-small rounded-s shadow-xl bg-red-dark" role="alert">
+                        <span><i class="fa fa-user"></i></span>
+                        <strong class="font-12">Withdraw $500 to Card</strong>
+                        <strong class="float-end opacity-50 font-10">Failed</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- End of Page Content-->
+    <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
+
+    
+   
+
+</div>
+
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="scripts/wallet.js"></script>
+</body>
