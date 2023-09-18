@@ -1,4 +1,5 @@
 jQuery(document).ready(function () {
+  if ("NDEFReader" in window) {
     const ndef = new NDEFReader();
     ndef.scan().then(() => {
         alert("Đã kết nối đến thiết bị NFC.");
@@ -9,5 +10,8 @@ jQuery(document).ready(function () {
         alert("Thẻ NFC đã được đọc:", event);
         // Xử lý dữ liệu từ thẻ NFC ở đây.
       });
+    }else{
+      alert("Không hỗ trợ NFC.");
+    }
       
 });
